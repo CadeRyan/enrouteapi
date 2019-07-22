@@ -1,0 +1,14 @@
+C:\Users\cader\Desktop\EnrouteRestAPI\EnrouteAPI\bin\Debug\netcoreapp2.1\EnrouteAPI.deps.json
+C:\Users\cader\Desktop\EnrouteRestAPI\EnrouteAPI\bin\Debug\netcoreapp2.1\EnrouteAPI.runtimeconfig.json
+C:\Users\cader\Desktop\EnrouteRestAPI\EnrouteAPI\bin\Debug\netcoreapp2.1\EnrouteAPI.runtimeconfig.dev.json
+C:\Users\cader\Desktop\EnrouteRestAPI\EnrouteAPI\bin\Debug\netcoreapp2.1\EnrouteAPI.dll
+C:\Users\cader\Desktop\EnrouteRestAPI\EnrouteAPI\bin\Debug\netcoreapp2.1\EnrouteAPI.pdb
+C:\Users\cader\Desktop\EnrouteRestAPI\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.csprojAssemblyReference.cache
+C:\Users\cader\Desktop\EnrouteRestAPI\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.csproj.CoreCompileInputs.cache
+C:\Users\cader\Desktop\EnrouteRestAPI\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.RazorAssemblyInfo.cache
+C:\Users\cader\Desktop\EnrouteRestAPI\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.RazorAssemblyInfo.cs
+C:\Users\cader\Desktop\EnrouteRestAPI\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.AssemblyInfoInputs.cache
+C:\Users\cader\Desktop\EnrouteRestAPI\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.AssemblyInfo.cs
+C:\Users\cader\Desktop\EnrouteRestAPI\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.RazorTargetAssemblyInfo.cache
+C:\Users\cader\Desktop\EnrouteRestAPI\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.dll
+C:\Users\cader\Desktop\EnrouteRestAPI\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.pdb
