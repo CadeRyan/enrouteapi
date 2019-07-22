@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,7 +24,14 @@ namespace EnrouteAPI.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return $"I'm the Real Time Information request, stopid = {id}";
+            WebRequest request = WebRequest.Create($"https://data.smartdublin.ie/cgi-bin/rtpi/realtimebusinformation?stopid={id}&format=json");
+
+            string text = "";
+            using (var sr = new StreamReader(request.GetResponse().GetResponseStream()))
+            {
+                text = sr.ReadToEnd();
+            }
+            return text;
         }
 
         // POST api/<controller>
