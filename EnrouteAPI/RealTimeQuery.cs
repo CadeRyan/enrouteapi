@@ -94,15 +94,15 @@ namespace EnrouteAPI
 
     public partial class RealTimeQuery
     {
-        public static RealTimeQuery FromJson(string json) => JsonConvert.DeserializeObject<RealTimeQuery>(json, EnrouteAPI.Converter.Settings);
+        public static RealTimeQuery FromJson(string json) => JsonConvert.DeserializeObject<RealTimeQuery>(json, EnrouteAPI.ConverterRTI.Settings);
     }
 
-    public static class Serialize
+    public static class SerializeRTI
     {
-        public static string ToJson(this RealTimeQuery self) => JsonConvert.SerializeObject(self, EnrouteAPI.Converter.Settings);
+        public static string ToJson(this RealTimeQuery self) => JsonConvert.SerializeObject(self, EnrouteAPI.ConverterRTI.Settings);
     }
 
-    internal static class Converter
+    internal static class ConverterRTI
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {
