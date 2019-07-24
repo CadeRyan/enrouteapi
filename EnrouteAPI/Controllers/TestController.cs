@@ -9,13 +9,13 @@ using Microsoft.AspNetCore.Mvc;
 namespace EnrouteAPI.Controllers
 {
     [Route("api/[controller]")]
-    public class TestController : Controller
+    public class TestController : ControllerBase
     {
         // GET: api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "Test, response" };
         }
 
         // GET api/values/5
