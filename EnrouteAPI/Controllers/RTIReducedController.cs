@@ -34,7 +34,7 @@ namespace EnrouteAPI.Controllers
                 rtqr.Numberofresults = rtq.Numberofresults;
                 rtqr.Stopid = rtq.Stopid;
                 rtqr.Results = new List<RealTimeQueryReduced.ResultReduced>();
-                foreach (Result result in rtq.Results)
+                foreach (RealTimeQueryResult result in rtq.Results)
                 {
                     rtqr.Results.Add(new RealTimeQueryReduced.ResultReduced(result.Duetime, result.Scheduledarrivaldatetime, result.Destination, result.Route));
                 }

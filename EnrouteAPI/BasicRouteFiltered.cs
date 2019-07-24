@@ -17,11 +17,11 @@ namespace EnrouteAPI
 
             public ResultReduced(string destination, List<StopReduced> stops)
             {
-                Destination = destination;
+                RouteDestination = destination;
                 Stops = stops;
             }
 
-            public string Destination { get; set; }
+            public string RouteDestination { get; set; }
             public List<StopReduced> Stops { get; set; }
 
             public partial class StopReduced

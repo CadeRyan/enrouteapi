@@ -2,9 +2,9 @@
 //
 // To parse this JSON data, add NuGet 'Newtonsoft.Json' then do:
 //
-//    using QuickType;
+//    using EnrouteAPI;
 //
-//    var busQuery = BusQuery.FromJson(jsonString);
+//    var busRouteQuery = BusRouteQuery.FromJson(jsonString);
 
 namespace EnrouteAPI
 {
@@ -28,32 +28,31 @@ namespace EnrouteAPI
         public long Numberofresults { get; set; }
 
         [JsonProperty("route")]
-        [JsonConverter(typeof(ParseStringConverter))]
-        public long Route { get; set; }
+        public string Route { get; set; }
 
         [JsonProperty("timestamp")]
         public string Timestamp { get; set; }
 
         [JsonProperty("results")]
-        public Result[] Results { get; set; }
+        public BusRouteQueryResult[] Results { get; set; }
     }
 
-    public partial class Result
+    public partial class BusRouteQueryResult
     {
-        [JsonProperty("operatorRoute")]
-        public OperatorEnum OperatorRoute { get; set; }
+        [JsonProperty("operator")]
+        public OperatorEnum Operator { get; set; }
 
-        [JsonProperty("originRoute")]
-        public string OriginRoute { get; set; }
+        [JsonProperty("origin")]
+        public string Origin { get; set; }
 
-        [JsonProperty("originlocalizedRoute")]
-        public string OriginlocalizedRoute { get; set; }
+        [JsonProperty("originlocalized")]
+        public string Originlocalized { get; set; }
 
-        [JsonProperty("destinationRoute")]
-        public string DestinationRoute { get; set; }
+        [JsonProperty("destination")]
+        public string Destination { get; set; }
 
-        [JsonProperty("destinationlocalizedRoute")]
-        public string DestinationlocalizedRoute { get; set; }
+        [JsonProperty("destinationlocalized")]
+        public string Destinationlocalized { get; set; }
 
         [JsonProperty("lastupdated")]
         public string Lastupdated { get; set; }
@@ -100,23 +99,22 @@ namespace EnrouteAPI
         public OperatorEnum Name { get; set; }
 
         [JsonProperty("routes")]
-        [JsonConverter(typeof(DecodeArrayConverter))]
-        public long[] Routes { get; set; }
+        public string[] Routes { get; set; }
     }
 
     public enum OperatorEnum { Bac };
 
     public partial class BusRouteQuery
     {
-        public static BusRouteQuery FromJson(string json) => JsonConvert.DeserializeObject<BusRouteQuery>(json, EnrouteAPI.ConverterRoute.Settings);
+        public static BusRouteQuery FromJson(string json) => JsonConvert.DeserializeObject<BusRouteQuery>(json, EnrouteAPI.Converter.Settings);
     }
 
-    public static class SerializeRoute
+    public static class Serialize
     {
-        public static string ToJson(this BusRouteQuery self) => JsonConvert.SerializeObject(self, EnrouteAPI.ConverterRoute.Settings);
+        public static string ToJson(this BusRouteQuery self) => JsonConvert.SerializeObject(self, EnrouteAPI.Converter.Settings);
     }
 
-    internal static class ConverterRoute
+    internal static class Converter
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {
@@ -193,39 +191,5 @@ namespace EnrouteAPI
         }
 
         public static readonly OperatorEnumConverter Singleton = new OperatorEnumConverter();
-    }
-
-    internal class DecodeArrayConverter : JsonConverter
-    {
-        public override bool CanConvert(Type t) => t == typeof(long[]);
-
-        public override object ReadJson(JsonReader reader, Type t, object existingValue, JsonSerializer serializer)
-        {
-            reader.Read();
-            var value = new List<long>();
-            while (reader.TokenType != JsonToken.EndArray)
-            {
-                var converter = ParseStringConverter.Singleton;
-                var arrayItem = (long)converter.ReadJson(reader, typeof(long), null, serializer);
-                value.Add(arrayItem);
-                reader.Read();
-            }
-            return value.ToArray();
-        }
-
-        public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
-        {
-            var value = (long[])untypedValue;
-            writer.WriteStartArray();
-            foreach (var arrayItem in value)
-            {
-                var converter = ParseStringConverter.Singleton;
-                converter.WriteJson(writer, arrayItem, serializer);
-            }
-            writer.WriteEndArray();
-            return;
-        }
-
-        public static readonly DecodeArrayConverter Singleton = new DecodeArrayConverter();
     }
 }

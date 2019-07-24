@@ -34,10 +34,10 @@ namespace EnrouteAPI
         public string Timestamp { get; set; }
 
         [JsonProperty("results")]
-        public List<Result> Results { get; set; }
+        public List<RealTimeQueryResult> Results { get; set; }
     }
 
-    public partial class Result
+    public partial class RealTimeQueryResult
     {
         [JsonProperty("arrivaldatetime")]
         public string Arrivaldatetime { get; set; }

@@ -40,7 +40,7 @@ namespace EnrouteAPI.Controllers
                 int count1 = 0;
                 int count2 = 0;
                 
-                foreach (Result result in brq.Results)
+                foreach (BusRouteQueryResult result in brq.Results)
                 {
                     if(result.Stops.Length > count1)
                     {
@@ -54,7 +54,7 @@ namespace EnrouteAPI.Controllers
 
                 brf.Numberofresults = count1;
                 brf.Route = count2;
-                foreach (Result result in brq.Results)
+                foreach (BusRouteQueryResult result in brq.Results)
                 {
                     var stops = new List<BasicRouteFiltered.ResultReduced.StopReduced>();
 
