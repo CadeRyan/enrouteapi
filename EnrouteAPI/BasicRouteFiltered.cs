@@ -10,6 +10,11 @@ namespace EnrouteAPI
         public int Count2 { get; set; }
         public int NotCount { get; set; }
 
+        public string Destination { get; set; }
+        public string Origin { get; set; }
+        public List<string> NotPlaces { get; set; }
+
+
         public List<ResultReduced> Results { get; set; }
 
         public partial class ResultReduced

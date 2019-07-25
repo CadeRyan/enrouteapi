@@ -38,29 +38,36 @@ namespace EnrouteAPI.Controllers
                 brf.Results = new List<BasicRouteFiltered.ResultReduced>();
 
                 int count1 = 0;
-                int count2 = 0;
+                string destination = "";
+                string start = "";
                 
                 foreach (BusRouteQueryResult result in brq.Results)
                 {
-                    if(result.Stops.Length > count1)
+                    if (result.Lastupdated.Contains("/2019"))
                     {
-                        //count2 = count1;
-                        count1 = result.Stops.Length;
+                        if (result.Stops.Length > count1)
+                        {
+                            //count2 = count1;
+                            count1 = result.Stops.Length;
+                            destination = result.Destination;
+                            start = result.Origin;
+                        }
                     }
-                    else if(result.Stops.Length > count2) { count2 = result.Stops.Length;
-                        brf.Count2 = count2;
-                    }
+                   
                 }
 
                 brf.Numberofresults = count1;
-                brf.Route = count2;
+                brf.Destination = destination;
+                brf.Origin = start;
+                brf.NotPlaces = new List<string>();
                 foreach (BusRouteQueryResult result in brq.Results)
                 {
                     var stops = new List<BasicRouteFiltered.ResultReduced.StopReduced>();
 
                     if (result.Lastupdated.Contains("/2019"))
                     {
-                        if (result.Stops.Length >= count1 - 3)
+                        if ((result.Destination.Equals(destination) && result.Origin.Equals(start))
+                            || (result.Destination.Equals(start) && result.Origin.Equals(destination)))
                         {
                             foreach (Stop stop in result.Stops)
                             {
@@ -74,6 +81,8 @@ namespace EnrouteAPI.Controllers
                             if (result.Stops.Length >= 50)
                             {
                                 brf.NotCount = result.Stops.Length;
+                                brf.NotPlaces.Add(result.Destination);
+                                //brf.NotPlaces.Add("test");
                             }
                         }
                     }

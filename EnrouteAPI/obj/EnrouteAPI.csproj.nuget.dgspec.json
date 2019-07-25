@@ -1,32 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cader\\Desktop\\EnrouteRestAPI\\EnrouteAPI\\EnrouteAPI.csproj": {}
+    "/Users/squidteam/Desktop/EnRouteAPI/enrouteapi/EnrouteAPI/EnrouteAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cader\\Desktop\\EnrouteRestAPI\\EnrouteAPI\\EnrouteAPI.csproj": {
+    "/Users/squidteam/Desktop/EnRouteAPI/enrouteapi/EnrouteAPI/EnrouteAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cader\\Desktop\\EnrouteRestAPI\\EnrouteAPI\\EnrouteAPI.csproj",
+        "projectUniqueName": "/Users/squidteam/Desktop/EnRouteAPI/enrouteapi/EnrouteAPI/EnrouteAPI.csproj",
         "projectName": "EnrouteAPI",
-        "projectPath": "C:\\Users\\cader\\Desktop\\EnrouteRestAPI\\EnrouteAPI\\EnrouteAPI.csproj",
-        "packagesPath": "C:\\Users\\cader\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cader\\Desktop\\EnrouteRestAPI\\EnrouteAPI\\obj\\",
+        "projectPath": "/Users/squidteam/Desktop/EnRouteAPI/enrouteapi/EnrouteAPI/EnrouteAPI.csproj",
+        "packagesPath": "/Users/squidteam/.nuget/packages/",
+        "outputPath": "/Users/squidteam/Desktop/EnRouteAPI/enrouteapi/EnrouteAPI/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\cader\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/squidteam/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
