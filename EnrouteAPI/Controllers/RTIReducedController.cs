@@ -25,6 +25,11 @@ namespace EnrouteAPI.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
+
+            ServicePointManager
+            .ServerCertificateValidationCallback +=
+                (sender, cert, chain, sslPolicyErrors) => true;
+
             WebRequest request = WebRequest.Create($"https://data.smartdublin.ie/cgi-bin/rtpi/realtimebusinformation?stopid={id}&format=json");
 
             using (var sr = new StreamReader(request.GetResponse().GetResponseStream()))

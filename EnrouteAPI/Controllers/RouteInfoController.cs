@@ -16,18 +16,34 @@ namespace EnrouteAPI.Controllers
     public class RouteInfoController : ControllerBase
     {
         // GET: api/<controller>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "Server working, routeinfo" };
-        }
+        //[HttpGet]
+        //public IEnumerable<string> Get()
+        //{
+        //    return new string[] { "Server working, routeinfo" };
+        //}
 
-        // GET api/<controller>/5
         [HttpGet("{id}")]
         public string Get(string id)
         {
 
-            WebRequest request = WebRequest.Create($"https://data.smartdublin.ie/cgi-bin/rtpi/routeinformation?routeid={id}&operator=bac&format=json");
+            ServicePointManager
+            .ServerCertificateValidationCallback +=
+               (sender, cert, chain, sslPolicyErrors) => true;
+
+            string busOperator = "";
+            if (StaticInfo.bacRoutes.Contains(id)){
+                busOperator = "bac";
+            }
+            else if (StaticInfo.gadRoutes.Contains(id))
+            {
+                busOperator = "gad";
+            }
+            else
+            {
+                //this shit will fail, handle appropriately
+            }
+
+            WebRequest request = WebRequest.Create($"https://data.smartdublin.ie/cgi-bin/rtpi/routeinformation?routeid={id}&operator={busOperator}&format=json");
 
             using (var sr = new StreamReader(request.GetResponse().GetResponseStream()))
             {
@@ -39,28 +55,40 @@ namespace EnrouteAPI.Controllers
 
                 int count1 = 0;
                 int count2 = 0;
+                string destination = "";
+                string start = "";
                 
                 foreach (BusRouteQueryResult result in brq.Results)
                 {
-                    if(result.Stops.Length > count1)
+                    if (result.Lastupdated.Contains("/2019"))
                     {
-                        //count2 = count1;
-                        count1 = result.Stops.Length;
+                        if (result.Stops.Length > count1)
+                        {
+                            count2 = count1;
+                            count1 = result.Stops.Length;
+                            destination = result.Destination;
+                            start = result.Origin;
+                        }
+                        else if(result.Stops.Length > count2)
+                        {
+                            count2 = result.Stops.Length;
+
+                        }
                     }
-                    else if(result.Stops.Length > count2) { count2 = result.Stops.Length;
-                        brf.Count2 = count2;
-                    }
+                   
                 }
 
                 brf.Numberofresults = count1;
-                brf.Route = count2;
+                brf.Destination = destination;
+                brf.Origin = start;
+                brf.NotPlaces = new List<string>();
                 foreach (BusRouteQueryResult result in brq.Results)
                 {
                     var stops = new List<BasicRouteFiltered.ResultReduced.StopReduced>();
 
                     if (result.Lastupdated.Contains("/2019"))
                     {
-                        if (result.Stops.Length >= count1 - 3)
+                        if(result.Stops.Length == count1 || result.Stops.Length == count2)
                         {
                             foreach (Stop stop in result.Stops)
                             {
@@ -74,6 +102,7 @@ namespace EnrouteAPI.Controllers
                             if (result.Stops.Length >= 50)
                             {
                                 brf.NotCount = result.Stops.Length;
+                                brf.NotPlaces.Add(result.Destination);
                             }
                         }
                     }
@@ -82,25 +111,6 @@ namespace EnrouteAPI.Controllers
                 }
                 return JsonConvert.SerializeObject(brf, Formatting.Indented);
             }
-            return ("DWD");
-        }
-
-        // POST api/<controller>
-        [HttpPost]
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/<controller>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/<controller>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }
