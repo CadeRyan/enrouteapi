@@ -38,6 +38,7 @@ namespace EnrouteAPI.Controllers
                 brf.Results = new List<BasicRouteFiltered.ResultReduced>();
 
                 int count1 = 0;
+                int count2 = 0;
                 string destination = "";
                 string start = "";
                 
@@ -47,10 +48,15 @@ namespace EnrouteAPI.Controllers
                     {
                         if (result.Stops.Length > count1)
                         {
-                            //count2 = count1;
+                            count2 = count1;
                             count1 = result.Stops.Length;
                             destination = result.Destination;
                             start = result.Origin;
+                        }
+                        else if(result.Stops.Length > count2)
+                        {
+                            count2 = result.Stops.Length;
+
                         }
                     }
                    
@@ -66,8 +72,9 @@ namespace EnrouteAPI.Controllers
 
                     if (result.Lastupdated.Contains("/2019"))
                     {
-                        if ((result.Destination.Equals(destination) && result.Origin.Equals(start))
-                            || (result.Destination.Equals(start) && result.Origin.Equals(destination)))
+                        //if ((result.Destination.Equals(destination) && result.Origin.Equals(start))
+                        //    || (result.Destination.Equals(start) && result.Origin.Equals(destination)))
+                        if(result.Stops.Length == count1 || result.Stops.Length == count2)
                         {
                             foreach (Stop stop in result.Stops)
                             {
