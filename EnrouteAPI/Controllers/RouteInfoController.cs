@@ -88,11 +88,8 @@ namespace EnrouteAPI.Controllers
 
                     if (result.Lastupdated.Contains("/2019"))
                     {
-<<<<<<< HEAD
                         //if ((result.Destination.Equals(destination) && result.Origin.Equals(start))
                         //    || (result.Destination.Equals(start) && result.Origin.Equals(destination)))
-=======
->>>>>>> 0fc97b853ac744925ad43c75db8dbd1d07d340ed
                         if(result.Stops.Length == count1 || result.Stops.Length == count2)
                         {
                             foreach (Stop stop in result.Stops)
@@ -108,10 +105,7 @@ namespace EnrouteAPI.Controllers
                             {
                                 brf.NotCount = result.Stops.Length;
                                 brf.NotPlaces.Add(result.Destination);
-<<<<<<< HEAD
                                 //brf.NotPlaces.Add("test");
-=======
->>>>>>> 0fc97b853ac744925ad43c75db8dbd1d07d340ed
                             }
                         }
                     }
