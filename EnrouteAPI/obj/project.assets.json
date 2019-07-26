@@ -11800,29 +11800,32 @@
     ]
   },
   "packageFolders": {
-    "/Users/squidteam/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\caryan\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/squidteam/Desktop/EnRouteAPI/enrouteapi/EnrouteAPI/EnrouteAPI.csproj",
+      "projectUniqueName": "C:\\Users\\caryan\\Desktop\\enrouteapi\\EnrouteAPI\\EnrouteAPI.csproj",
       "projectName": "EnrouteAPI",
-      "projectPath": "/Users/squidteam/Desktop/EnRouteAPI/enrouteapi/EnrouteAPI/EnrouteAPI.csproj",
-      "packagesPath": "/Users/squidteam/.nuget/packages/",
-      "outputPath": "/Users/squidteam/Desktop/EnRouteAPI/enrouteapi/EnrouteAPI/obj/",
+      "projectPath": "C:\\Users\\caryan\\Desktop\\enrouteapi\\EnrouteAPI\\EnrouteAPI.csproj",
+      "packagesPath": "C:\\Users\\caryan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\caryan\\Desktop\\enrouteapi\\EnrouteAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/squidteam/.config/NuGet/NuGet.Config"
+        "C:\\Users\\caryan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://office.pkgs.visualstudio.com/_packaging/Office/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.1": {
