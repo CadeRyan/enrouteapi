@@ -16,18 +16,34 @@ namespace EnrouteAPI.Controllers
     public class RouteInfoController : ControllerBase
     {
         // GET: api/<controller>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "Server working, routeinfo" };
-        }
+        //[HttpGet]
+        //public IEnumerable<string> Get()
+        //{
+        //    return new string[] { "Server working, routeinfo" };
+        //}
 
-        // GET api/<controller>/5
         [HttpGet("{id}")]
         public string Get(string id)
         {
 
-            WebRequest request = WebRequest.Create($"https://data.smartdublin.ie/cgi-bin/rtpi/routeinformation?routeid={id}&operator=bac&format=json");
+            ServicePointManager
+            .ServerCertificateValidationCallback +=
+               (sender, cert, chain, sslPolicyErrors) => true;
+
+            string busOperator = "";
+            if (StaticInfo.bacRoutes.Contains(id)){
+                busOperator = "bac";
+            }
+            else if (StaticInfo.gadRoutes.Contains(id))
+            {
+                busOperator = "gad";
+            }
+            else
+            {
+                //this shit will fail, handle appropriately
+            }
+
+            WebRequest request = WebRequest.Create($"https://data.smartdublin.ie/cgi-bin/rtpi/routeinformation?routeid={id}&operator={busOperator}&format=json");
 
             using (var sr = new StreamReader(request.GetResponse().GetResponseStream()))
             {
@@ -72,8 +88,11 @@ namespace EnrouteAPI.Controllers
 
                     if (result.Lastupdated.Contains("/2019"))
                     {
+<<<<<<< HEAD
                         //if ((result.Destination.Equals(destination) && result.Origin.Equals(start))
                         //    || (result.Destination.Equals(start) && result.Origin.Equals(destination)))
+=======
+>>>>>>> 0fc97b853ac744925ad43c75db8dbd1d07d340ed
                         if(result.Stops.Length == count1 || result.Stops.Length == count2)
                         {
                             foreach (Stop stop in result.Stops)
@@ -89,7 +108,10 @@ namespace EnrouteAPI.Controllers
                             {
                                 brf.NotCount = result.Stops.Length;
                                 brf.NotPlaces.Add(result.Destination);
+<<<<<<< HEAD
                                 //brf.NotPlaces.Add("test");
+=======
+>>>>>>> 0fc97b853ac744925ad43c75db8dbd1d07d340ed
                             }
                         }
                     }
@@ -98,25 +120,6 @@ namespace EnrouteAPI.Controllers
                 }
                 return JsonConvert.SerializeObject(brf, Formatting.Indented);
             }
-            return ("DWD");
-        }
-
-        // POST api/<controller>
-        [HttpPost]
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/<controller>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/<controller>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }

@@ -102,7 +102,7 @@ namespace EnrouteAPI
         public string[] Routes { get; set; }
     }
 
-    public enum OperatorEnum { Bac };
+    public enum OperatorEnum { Bac, Gad };
 
     public partial class BusRouteQuery
     {
@@ -167,9 +167,12 @@ namespace EnrouteAPI
         {
             if (reader.TokenType == JsonToken.Null) return null;
             var value = serializer.Deserialize<string>(reader);
-            if (value == "bac")
+            switch (value)
             {
-                return OperatorEnum.Bac;
+                case "GAD":
+                    return OperatorEnum.Gad;
+                case "bac":
+                    return OperatorEnum.Bac;
             }
             throw new Exception("Cannot unmarshal type OperatorEnum");
         }
@@ -182,10 +185,14 @@ namespace EnrouteAPI
                 return;
             }
             var value = (OperatorEnum)untypedValue;
-            if (value == OperatorEnum.Bac)
+            switch (value)
             {
-                serializer.Serialize(writer, "bac");
-                return;
+                case OperatorEnum.Gad:
+                    serializer.Serialize(writer, "GAD");
+                    return;
+                case OperatorEnum.Bac:
+                    serializer.Serialize(writer, "bac");
+                    return;
             }
             throw new Exception("Cannot marshal type OperatorEnum");
         }

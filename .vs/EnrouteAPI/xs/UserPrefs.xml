@@ -1,5 +1,6 @@
 ﻿<Properties StartupConfiguration="{71CBAD7F-B9D5-4858-8D03-0CCD28BB6545}|Default">
   <MonoDevelop.Ide.ItemProperties.EnrouteAPI PreferredExecutionTarget="MonoDevelop.Default" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="EnrouteAPI/Controllers/dartRTIController.cs">
     <Files>
       <File FileName="EnrouteAPI/BusRouteQuery.cs" Line="1" Column="1" />
@@ -11,6 +12,18 @@
       <File FileName="../../../../../usr/local/share/dotnet/sdk/2.1.700/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" Line="210" Column="59" />
       <File FileName="EnrouteAPI/Controllers/RTIController.cs" Line="1" Column="1" />
       <File FileName="EnrouteAPI/Controllers/dartRTIController.cs" Line="1" Column="1" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="EnrouteAPI/Controllers/RTIController.cs">
+    <Files>
+      <File FileName="EnrouteAPI/BusRouteQuery.cs" Line="1" Column="1" />
+      <File FileName="EnrouteAPI/RealTimeQuery.cs" />
+      <File FileName="EnrouteAPI/Controllers/RTIReducedController.cs" />
+      <File FileName="EnrouteAPI/Controllers/RouteInfoController.cs" />
+      <File FileName="EnrouteAPI/BasicRouteFiltered.cs" />
+      <File FileName="EnrouteAPI/RealTimeQueryReduced.cs" />
+      <File FileName="../../../../../usr/local/share/dotnet/sdk/2.1.700/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" Line="210" Column="59" />
+      <File FileName="EnrouteAPI/Controllers/RTIController.cs" Line="1" Column="1" />
+>>>>>>> 0fc97b853ac744925ad43c75db8dbd1d07d340ed
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,7 +31,11 @@
           <Node name="EnrouteAPI" expanded="True">
             <Node name="EnrouteAPI" expanded="True">
               <Node name="Controllers" expanded="True">
+<<<<<<< HEAD
                 <Node name="dartRTIController.cs" selected="True" />
+=======
+                <Node name="RTIController.cs" selected="True" />
+>>>>>>> 0fc97b853ac744925ad43c75db8dbd1d07d340ed
               </Node>
             </Node>
           </Node>
