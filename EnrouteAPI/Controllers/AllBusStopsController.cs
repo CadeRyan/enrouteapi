@@ -47,6 +47,7 @@ namespace EnrouteAPI.Controllers
                     }
                 }
             }
+            output.StopCount = output.BusStopDataResults.Count;
             return JsonConvert.SerializeObject(output, Formatting.Indented);
         }
 

@@ -10,6 +10,7 @@ namespace EnrouteAPI
         {
             BusStopDataResults = new List<StopReduced>();
         }
+        public int StopCount { get; set; }
         public List<StopReduced> BusStopDataResults { get; set; }
 
         public class StopReduced
