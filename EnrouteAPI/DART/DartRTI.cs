@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System;
+﻿using System.Collections.Generic;
 using System.Xml.Serialization;
-using System.Collections.Generic;
 
-namespace EnrouteAPI
+namespace EnrouteAPI.DART
 {
     [XmlRoot(ElementName = "objStationData", Namespace = "http://api.irishrail.ie/realtime/")]
     public class ObjStationData

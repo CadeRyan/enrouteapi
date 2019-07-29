@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EnrouteAPI
+namespace EnrouteAPI.DublinBus
 {
     public partial class BasicRouteFiltered
     {

@@ -1,31 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using Newtonsoft.Json;
 using System.IO;
-using System.Diagnostics;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using EnrouteAPI.DublinBus;
 
 namespace EnrouteAPI.Controllers
 {
     [Route("api/[controller]")]
     public class RouteInfoController : ControllerBase
     {
-        // GET: api/<controller>
-        //[HttpGet]
-        //public IEnumerable<string> Get()
-        //{
-        //    return new string[] { "Server working, routeinfo" };
-        //}
-
         [HttpGet("{id}")]
         public string Get(string id)
         {
-
             ServicePointManager
             .ServerCertificateValidationCallback +=
                (sender, cert, chain, sslPolicyErrors) => true;
@@ -49,8 +38,6 @@ namespace EnrouteAPI.Controllers
             {
                 var brq = BusRouteQuery.FromJson(sr.ReadToEnd());
                 BasicRouteFiltered brf = new BasicRouteFiltered();
-                //brf.Numberofresults = brq.Numberofresults;
-                //brf.Route = brq.Route;
                 brf.Results = new List<BasicRouteFiltered.ResultReduced>();
 
                 int count1 = 0;
@@ -75,7 +62,6 @@ namespace EnrouteAPI.Controllers
 
                         }
                     }
-                   
                 }
 
                 brf.Numberofresults = count1;
@@ -109,8 +95,6 @@ namespace EnrouteAPI.Controllers
                             }
                         }
                     }
-                  
-                    
                 }
                 return JsonConvert.SerializeObject(brf, Formatting.Indented);
             }
