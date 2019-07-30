@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using EnrouteAPI.DublinBus;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -15,43 +17,46 @@ namespace EnrouteAPI.Controllers.BusControllers
         [HttpGet]
         public string Get()
         {
-            AllStopsOutput output = new AllStopsOutput();
+            List<BusRouteQuery> allRoutes = new List<BusRouteQuery>();
 
-            foreach (string stop in StaticInfo.allRoutes)
+            Parallel.ForEach(StaticInfo.allRoutes, (stop) =>
             {
                 string op = GetOperator(stop);
 
                 WebRequest request = WebRequest.Create($"https://data.smartdublin.ie/cgi-bin/rtpi/routeinformation?routeid={stop}&operator={op}&format=json");
                 using (var sr = new StreamReader(request.GetResponse().GetResponseStream()))
                 {
-                    BusRouteQuery data = BusRouteQuery.FromJson(sr.ReadToEnd());
+                    allRoutes.Add(BusRouteQuery.FromJson(sr.ReadToEnd()));
+                }
+            });
 
-                    foreach (BusRouteQueryResult routeData in data.Results)
+            AllStopsOutput output = new AllStopsOutput();
+
+            foreach (BusRouteQuery data in allRoutes)
+            {
+                foreach (BusRouteQueryResult routeData in data.Results)
+                {
+                    foreach (Stop busStopData in routeData.Stops)
                     {
-                        foreach (Stop busStopData in routeData.Stops)
+                        if (!AlreadyContainsID(output, busStopData))
                         {
-                            if (!AlreadyContainsID(output, busStopData))
-                            {
-                                output.BusStopDataResults.Add(new AllStopsOutput.StopReduced(busStopData.Stopid, busStopData.Shortname,
-                                    busStopData.Fullname, busStopData.Latitude, busStopData.Longitude));
-                            }
+                            output.BusStopDataResults.Add(new AllStopsOutput.StopReduced(busStopData.Stopid, busStopData.Shortname,
+                                busStopData.Fullname, busStopData.Latitude, busStopData.Longitude));
                         }
                     }
                 }
             }
+
             output.StopCount = output.BusStopDataResults.Count;
             return JsonConvert.SerializeObject(output, Formatting.Indented);
         }
 
         private static string GetOperator(string stop)
         {
-            if (StaticInfo.bacRoutes.Contains(stop))
+            switch (StaticInfo.gadRoutes.Contains(stop))
             {
-                return "bac";
-            }
-            else
-            {
-                return "gad";
+                case true: return "gad";
+                default: return "bac";
             }
         }
 

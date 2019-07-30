@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 
 namespace EnrouteAPI.Controllers.FastControllers
 {
