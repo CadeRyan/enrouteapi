@@ -9,9 +9,9 @@ namespace EnrouteAPI.Controllers
     public class AllBusStopsController : Controller
     {
         [HttpGet]
-        public object Get()
+        public string Get()
         {
-            return JsonConvert.DeserializeObject(System.IO.File.ReadAllText(Path.Combine(Environment.CurrentDirectory, @"Files\", "AllBusStops.json")));
+            return System.IO.File.ReadAllText(Path.Combine(Environment.CurrentDirectory, @"Files\", "AllBusStops.json"));
         }
     }
 }
