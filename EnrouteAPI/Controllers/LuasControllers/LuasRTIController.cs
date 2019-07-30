@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Net;
-using System.Threading.Tasks;
-using System.Xml;
-using System.Xml.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using EnrouteAPI.LUAS;
@@ -29,8 +23,17 @@ namespace EnrouteAPI.Controllers.LuasControllers
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(LuasRealTime));
                 LuasRealTime luasStopData = (LuasRealTime)serializer.Deserialize(sr);
+                LuasRealTimeReduced output = new LuasRealTimeReduced(luasStopData.Stop, luasStopData.StopAbv, luasStopData.Message);
 
-                return JsonConvert.SerializeObject(luasStopData, Newtonsoft.Json.Formatting.Indented);
+                foreach (Direction direction in luasStopData.Direction)
+                {
+                    foreach(Tram tram in direction.Tram)
+                    {
+                        output.Trams.Add(new LuasRealTimeReduced.TramReduced(tram.Destination, tram.DueMins, direction.Name));
+                    }
+                }
+
+                return JsonConvert.SerializeObject(output, Formatting.Indented);
             }
         }
     }

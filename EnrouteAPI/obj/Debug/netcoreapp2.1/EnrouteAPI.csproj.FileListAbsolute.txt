@@ -39,4 +39,3 @@ C:\Users\caryan\Desktop\enrouteapi\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI
 C:\Users\caryan\Desktop\enrouteapi\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.RazorTargetAssemblyInfo.cache
 C:\Users\caryan\Desktop\enrouteapi\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.dll
 C:\Users\caryan\Desktop\enrouteapi\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.pdb
-C:\Users\caryan\Desktop\enrouteapi\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.csprojAssemblyReference.cache
