@@ -28,7 +28,16 @@ namespace EnrouteAPI.Controllers
                 XmlSerializer serializer = new XmlSerializer(typeof(LuasRouteQuery));
                 LuasRouteQuery luasStopsData = (LuasRouteQuery)serializer.Deserialize(sr);
 
-                return JsonConvert.SerializeObject(luasStopsData, Newtonsoft.Json.Formatting.Indented);
+                LuasRouteQueryReduced output = new LuasRouteQueryReduced();
+
+                foreach (Line line in luasStopsData.Line)
+                {
+                    foreach (Stop stop in line.Stop)
+                    {
+                        output.Stops.Add(new StopReduced(stop.Text, stop.Abrev, line.Name, stop.Lat, stop.Long));
+                    }
+                }
+                return JsonConvert.SerializeObject(output, Formatting.Indented);
             }
         }
 
