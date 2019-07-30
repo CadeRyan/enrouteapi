@@ -1,14 +1,14 @@
 ﻿using System.IO;
 using System.Net;
 using System.Xml.Serialization;
-using EnrouteAPI.DART;
+using EnrouteAPI.Train;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace EnrouteAPI.Controllers
 {
     [Route("api/[controller]")]
-    public class DartRTIController : ControllerBase
+    public class TrainRTIController : ControllerBase
     {
         [HttpGet("{id}")]
         public string Get(string id)
@@ -17,14 +17,14 @@ namespace EnrouteAPI.Controllers
 
             using (var sr = new StreamReader(request.GetResponse().GetResponseStream()))
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(ArrayOfObjStationData));
-                ArrayOfObjStationData arrayOfObjStationData = (ArrayOfObjStationData)serializer.Deserialize(sr);
+                XmlSerializer serializer = new XmlSerializer(typeof(TrainRTI));
+                TrainRTI trainRTI = (TrainRTI)serializer.Deserialize(sr);
 
-                DartRTIOutput output = new DartRTIOutput();
+                TrainRTIReduced output = new TrainRTIReduced();
 
-                foreach(var result in arrayOfObjStationData.ObjStationData)
+                foreach(var result in trainRTI.RTIData)
                 {
-                    output.Results.Add(new DartRTIOutput.DartRTIResult(result.Traincode, result.Stationfullname, result.Stationcode,
+                    output.Results.Add(new TrainRTIReduced.TrainRTIResult(result.Traincode, result.Stationfullname, result.Stationcode,
                         result.Origin, result.Destination, result.Origintime, result.Destinationtime, result.Status,
                         result.Lastlocation, result.Duein, result.Late, result.Exparrival, result.Expdepart, result.Scharrival,
                         result.Schdepart, result.Direction, result.Traintype, result.Locationtype));

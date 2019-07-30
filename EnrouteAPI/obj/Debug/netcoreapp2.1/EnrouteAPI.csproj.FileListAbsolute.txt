@@ -31,7 +31,6 @@ C:\Users\caryan\Desktop\enrouteapi\EnrouteAPI\bin\Debug\netcoreapp2.1\EnrouteAPI
 C:\Users\caryan\Desktop\enrouteapi\EnrouteAPI\bin\Debug\netcoreapp2.1\EnrouteAPI.runtimeconfig.dev.json
 C:\Users\caryan\Desktop\enrouteapi\EnrouteAPI\bin\Debug\netcoreapp2.1\EnrouteAPI.dll
 C:\Users\caryan\Desktop\enrouteapi\EnrouteAPI\bin\Debug\netcoreapp2.1\EnrouteAPI.pdb
-C:\Users\caryan\Desktop\enrouteapi\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.csprojAssemblyReference.cache
 C:\Users\caryan\Desktop\enrouteapi\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.csproj.CoreCompileInputs.cache
 C:\Users\caryan\Desktop\enrouteapi\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.RazorAssemblyInfo.cache
 C:\Users\caryan\Desktop\enrouteapi\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.RazorAssemblyInfo.cs
@@ -40,3 +39,4 @@ C:\Users\caryan\Desktop\enrouteapi\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI
 C:\Users\caryan\Desktop\enrouteapi\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.RazorTargetAssemblyInfo.cache
 C:\Users\caryan\Desktop\enrouteapi\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.dll
 C:\Users\caryan\Desktop\enrouteapi\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.pdb
+C:\Users\caryan\Desktop\enrouteapi\EnrouteAPI\obj\Debug\netcoreapp2.1\EnrouteAPI.csprojAssemblyReference.cache

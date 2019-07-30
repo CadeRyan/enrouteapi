@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EnrouteAPI.DART
+namespace EnrouteAPI.Train
 {
-    public class DartRTIOutput
+    public class TrainRTIReduced
     {
-        public DartRTIOutput()
+        public TrainRTIReduced()
         {
-            Results = new List<DartRTIResult>();
+            Results = new List<TrainRTIResult>();
         }
 
-        public List<DartRTIResult> Results { get; set; }
+        public List<TrainRTIResult> Results { get; set; }
 
-        public class DartRTIResult
+        public class TrainRTIResult
         {
-            public DartRTIResult(string traincode, string stationfullname, string stationcode,
+            public TrainRTIResult(string traincode, string stationfullname, string stationcode,
             string origin, string destination, string origintime, string destinationtime,
             string status, string lastlocation, string duein, string late, string exparrival,
             string expdepart, string scharrival, string schdepart, string direction,

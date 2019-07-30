@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace EnrouteAPI.DART
+namespace EnrouteAPI.Train
 {
     [XmlRoot(ElementName = "objStationData", Namespace = "http://api.irishrail.ie/realtime/")]
-    public class ObjStationData
+    public class RTIData
     {
         [XmlElement(ElementName = "Servertime", Namespace = "http://api.irishrail.ie/realtime/")]
         public string Servertime { get; set; }
@@ -51,10 +51,10 @@ namespace EnrouteAPI.DART
     }
 
     [XmlRoot(ElementName = "ArrayOfObjStationData", Namespace = "http://api.irishrail.ie/realtime/")]
-    public class ArrayOfObjStationData
+    public class TrainRTI
     {
         [XmlElement(ElementName = "objStationData", Namespace = "http://api.irishrail.ie/realtime/")]
-        public List<ObjStationData> ObjStationData { get; set; }
+        public List<RTIData> RTIData { get; set; }
         [XmlAttribute(AttributeName = "xsi", Namespace = "http://www.w3.org/2000/xmlns/")]
         public string Xsi { get; set; }
         [XmlAttribute(AttributeName = "xsd", Namespace = "http://www.w3.org/2000/xmlns/")]

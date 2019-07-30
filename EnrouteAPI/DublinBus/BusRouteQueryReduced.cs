@@ -3,29 +3,24 @@ using System.Collections.Generic;
 
 namespace EnrouteAPI.DublinBus
 {
-    public partial class BasicRouteFiltered
+    public partial class BusRouteQueryReduced
     {
         public int Numberofresults { get; set; }
         public int Route { get; set; }
         public int Count2 { get; set; }
         public int NotCount { get; set; }
-
         public string Destination { get; set; }
         public string Origin { get; set; }
         public List<string> NotPlaces { get; set; }
-
-
         public List<ResultReduced> Results { get; set; }
 
         public partial class ResultReduced
         {
-
             public ResultReduced(string destination, List<StopReduced> stops)
             {
                 RouteDestination = destination;
                 Stops = stops;
             }
-
             public string RouteDestination { get; set; }
             public List<StopReduced> Stops { get; set; }
 

@@ -10,7 +10,7 @@ using EnrouteAPI.DublinBus;
 namespace EnrouteAPI.Controllers
 {
     [Route("api/[controller]")]
-    public class RouteInfoController : ControllerBase
+    public class BusRouteInfoController : ControllerBase
     {
         [HttpGet("{id}")]
         public string Get(string id)
@@ -37,8 +37,8 @@ namespace EnrouteAPI.Controllers
             using (var sr = new StreamReader(request.GetResponse().GetResponseStream()))
             {
                 var brq = BusRouteQuery.FromJson(sr.ReadToEnd());
-                BasicRouteFiltered brf = new BasicRouteFiltered();
-                brf.Results = new List<BasicRouteFiltered.ResultReduced>();
+                BusRouteQueryReduced brqr = new BusRouteQueryReduced();
+                brqr.Results = new List<BusRouteQueryReduced.ResultReduced>();
 
                 int count1 = 0;
                 int count2 = 0;
@@ -64,13 +64,13 @@ namespace EnrouteAPI.Controllers
                     }
                 }
 
-                brf.Numberofresults = count1;
-                brf.Destination = destination;
-                brf.Origin = start;
-                brf.NotPlaces = new List<string>();
+                brqr.Numberofresults = count1;
+                brqr.Destination = destination;
+                brqr.Origin = start;
+                brqr.NotPlaces = new List<string>();
                 foreach (BusRouteQueryResult result in brq.Results)
                 {
-                    var stops = new List<BasicRouteFiltered.ResultReduced.StopReduced>();
+                    var stops = new List<BusRouteQueryReduced.ResultReduced.StopReduced>();
 
                     if (result.Lastupdated.Contains("/2019"))
                     {
@@ -80,23 +80,23 @@ namespace EnrouteAPI.Controllers
                         {
                             foreach (Stop stop in result.Stops)
                             {
-                                stops.Add(new BasicRouteFiltered.ResultReduced.StopReduced(stop.Stopid, stop.Fullname, stop.Latitude, stop.Longitude));
+                                stops.Add(new BusRouteQueryReduced.ResultReduced.StopReduced(stop.Stopid, stop.Fullname, stop.Latitude, stop.Longitude));
 
                             }
-                            brf.Results.Add(new BasicRouteFiltered.ResultReduced(result.Destination, stops));
+                            brqr.Results.Add(new BusRouteQueryReduced.ResultReduced(result.Destination, stops));
                         }
                         else
                         {
                             if (result.Stops.Length >= 50)
                             {
-                                brf.NotCount = result.Stops.Length;
-                                brf.NotPlaces.Add(result.Destination);
+                                brqr.NotCount = result.Stops.Length;
+                                brqr.NotPlaces.Add(result.Destination);
                                 //brf.NotPlaces.Add("test");
                             }
                         }
                     }
                 }
-                return JsonConvert.SerializeObject(brf, Formatting.Indented);
+                return JsonConvert.SerializeObject(brqr, Formatting.Indented);
             }
         }
     }

@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Threading.Tasks;
 using EnrouteAPI.DublinBus;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -11,7 +8,7 @@ using Newtonsoft.Json;
 namespace EnrouteAPI.Controllers
 {
     [Route("api/[controller]")]
-    public class RTIReducedController : Controller
+    public class BusRTIController : ControllerBase
     {
         [HttpGet("{id}")]
         public string Get(int id)
@@ -19,7 +16,7 @@ namespace EnrouteAPI.Controllers
             ServicePointManager
             .ServerCertificateValidationCallback +=
                 (sender, cert, chain, sslPolicyErrors) => true;
-
+    
             WebRequest request = WebRequest.Create($"https://data.smartdublin.ie/cgi-bin/rtpi/realtimebusinformation?stopid={id}&format=json");
 
             using (var sr = new StreamReader(request.GetResponse().GetResponseStream()))
