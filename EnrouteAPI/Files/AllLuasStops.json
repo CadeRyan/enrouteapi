@@ -1,0 +1,473 @@
+{
+  "Stops": [
+    {
+      "Text": "The Point",
+      "Abrev": "TPT",
+      "Line": "Luas Red Line",
+      "Lat": "53.34835",
+      "Long": "-6.22925833333333"
+    },
+    {
+      "Text": "Spencer Dock",
+      "Abrev": "SDK",
+      "Line": "Luas Red Line",
+      "Lat": "53.3488222222222",
+      "Long": "-6.23714722222222"
+    },
+    {
+      "Text": "Mayor Square - NCI",
+      "Abrev": "MYS",
+      "Line": "Luas Red Line",
+      "Lat": "53.3492472222222",
+      "Long": "-6.24339444444444"
+    },
+    {
+      "Text": "George's Dock",
+      "Abrev": "GDK",
+      "Line": "Luas Red Line",
+      "Lat": "53.349528",
+      "Long": "-6.247575"
+    },
+    {
+      "Text": "Connolly",
+      "Abrev": "CON",
+      "Line": "Luas Red Line",
+      "Lat": "53.3509222222222",
+      "Long": "-6.24994166666667"
+    },
+    {
+      "Text": "Busáras",
+      "Abrev": "BUS",
+      "Line": "Luas Red Line",
+      "Lat": "53.350075",
+      "Long": "-6.25145"
+    },
+    {
+      "Text": "Abbey Street",
+      "Abrev": "ABB",
+      "Line": "Luas Red Line",
+      "Lat": "53.3485888888889",
+      "Long": "-6.25817222222222"
+    },
+    {
+      "Text": "Jervis",
+      "Abrev": "JER",
+      "Line": "Luas Red Line",
+      "Lat": "53.3476861111111",
+      "Long": "-6.26533333333333"
+    },
+    {
+      "Text": "Four Courts",
+      "Abrev": "FOU",
+      "Line": "Luas Red Line",
+      "Lat": "53.3468638888889",
+      "Long": "-6.27343611111111"
+    },
+    {
+      "Text": "Smithfield",
+      "Abrev": "SMI",
+      "Line": "Luas Red Line",
+      "Lat": "53.3471333333333",
+      "Long": "-6.27772777777778"
+    },
+    {
+      "Text": "Museum",
+      "Abrev": "MUS",
+      "Line": "Luas Red Line",
+      "Lat": "53.3478666666667",
+      "Long": "-6.28671388888889"
+    },
+    {
+      "Text": "Heuston",
+      "Abrev": "HEU",
+      "Line": "Luas Red Line",
+      "Lat": "53.3466472222222",
+      "Long": "-6.29180833333333"
+    },
+    {
+      "Text": "James's",
+      "Abrev": "JAM",
+      "Line": "Luas Red Line",
+      "Lat": "53.3419416666667",
+      "Long": "-6.29336111111111"
+    },
+    {
+      "Text": "Fatima",
+      "Abrev": "FAT",
+      "Line": "Luas Red Line",
+      "Lat": "53.3384388888889",
+      "Long": "-6.29254722222222"
+    },
+    {
+      "Text": "Rialto",
+      "Abrev": "RIA",
+      "Line": "Luas Red Line",
+      "Lat": "53.3379083333333",
+      "Long": "-6.29724166666667"
+    },
+    {
+      "Text": "Suir Road",
+      "Abrev": "SUI",
+      "Line": "Luas Red Line",
+      "Lat": "53.3366166666667",
+      "Long": "-6.30721111111111"
+    },
+    {
+      "Text": "Goldenbridge",
+      "Abrev": "GOL",
+      "Line": "Luas Red Line",
+      "Lat": "53.3358916666667",
+      "Long": "-6.31356944444444"
+    },
+    {
+      "Text": "Drimnagh",
+      "Abrev": "DRI",
+      "Line": "Luas Red Line",
+      "Lat": "53.3353611111111",
+      "Long": "-6.31816111111111"
+    },
+    {
+      "Text": "Blackhorse",
+      "Abrev": "BLA",
+      "Line": "Luas Red Line",
+      "Lat": "53.3342583333333",
+      "Long": "-6.32739444444444"
+    },
+    {
+      "Text": "Bluebell",
+      "Abrev": "BLU",
+      "Line": "Luas Red Line",
+      "Lat": "53.3292972222222",
+      "Long": "-6.33379166666667"
+    },
+    {
+      "Text": "Kylemore",
+      "Abrev": "KYL",
+      "Line": "Luas Red Line",
+      "Lat": "53.3266555555556",
+      "Long": "-6.34344444444444"
+    },
+    {
+      "Text": "Red Cow",
+      "Abrev": "RED",
+      "Line": "Luas Red Line",
+      "Lat": "53.3168333333333",
+      "Long": "-6.36987222222222"
+    },
+    {
+      "Text": "Kingswood",
+      "Abrev": "KIN",
+      "Line": "Luas Red Line",
+      "Lat": "53.3036944444444",
+      "Long": "-6.36525"
+    },
+    {
+      "Text": "Belgard",
+      "Abrev": "BEL",
+      "Line": "Luas Red Line",
+      "Lat": "53.2992861111111",
+      "Long": "-6.37488611111111"
+    },
+    {
+      "Text": "Cookstown",
+      "Abrev": "COO",
+      "Line": "Luas Red Line",
+      "Lat": "53.2935055555556",
+      "Long": "-6.38439722222222"
+    },
+    {
+      "Text": "Hospital",
+      "Abrev": "HOS",
+      "Line": "Luas Red Line",
+      "Lat": "53.2893694444444",
+      "Long": "-6.37885"
+    },
+    {
+      "Text": "Tallaght",
+      "Abrev": "TAL",
+      "Line": "Luas Red Line",
+      "Lat": "53.2874944444444",
+      "Long": "-6.37458888888889"
+    },
+    {
+      "Text": "Fettercairn",
+      "Abrev": "FET",
+      "Line": "Luas Red Line",
+      "Lat": "53.29351885",
+      "Long": "-6.395553516667"
+    },
+    {
+      "Text": "Cheeverstown",
+      "Abrev": "CVN",
+      "Line": "Luas Red Line",
+      "Lat": "53.290982416667",
+      "Long": "-6.4068485"
+    },
+    {
+      "Text": "Citywest Campus",
+      "Abrev": "CIT",
+      "Line": "Luas Red Line",
+      "Lat": "53.28783255",
+      "Long": "-6.418914583333"
+    },
+    {
+      "Text": "Fortunestown",
+      "Abrev": "FOR",
+      "Line": "Luas Red Line",
+      "Lat": "53.284250633333",
+      "Long": "-6.42460165"
+    },
+    {
+      "Text": "Saggart",
+      "Abrev": "SAG",
+      "Line": "Luas Red Line",
+      "Lat": "53.28467885",
+      "Long": "-6.43776255"
+    },
+    {
+      "Text": "Broombridge",
+      "Abrev": "BRO",
+      "Line": "Luas Green Line",
+      "Lat": "53.37223956",
+      "Long": "-6.29768465"
+    },
+    {
+      "Text": "Cabra",
+      "Abrev": "CAB",
+      "Line": "Luas Green Line",
+      "Lat": "53.36433419",
+      "Long": "-6.28196899"
+    },
+    {
+      "Text": "Phibsborough",
+      "Abrev": "PHI",
+      "Line": "Luas Green Line",
+      "Lat": "53.36037646",
+      "Long": "-6.27888498"
+    },
+    {
+      "Text": "Grangegorman",
+      "Abrev": "GRA",
+      "Line": "Luas Green Line",
+      "Lat": "53.35719205",
+      "Long": "-6.27733848"
+    },
+    {
+      "Text": "Broadstone - DIT",
+      "Abrev": "BRD",
+      "Line": "Luas Green Line",
+      "Lat": "53.35407442",
+      "Long": "-6.27375642"
+    },
+    {
+      "Text": "Dominick",
+      "Abrev": "DOM",
+      "Line": "Luas Green Line",
+      "Lat": "53.3513492",
+      "Long": "-6.26554234"
+    },
+    {
+      "Text": "Parnell",
+      "Abrev": "PAR",
+      "Line": "Luas Green Line",
+      "Lat": "53.35310356",
+      "Long": "-6.26050153"
+    },
+    {
+      "Text": "O'Connell - Upper",
+      "Abrev": "OUP",
+      "Line": "Luas Green Line",
+      "Lat": "53.35161218",
+      "Long": "-6.26102943"
+    },
+    {
+      "Text": "O'Connell - GPO",
+      "Abrev": "OGP",
+      "Line": "Luas Green Line",
+      "Lat": "53.34884509",
+      "Long": "-6.25988168"
+    },
+    {
+      "Text": "Marlborough",
+      "Abrev": "MAR",
+      "Line": "Luas Green Line",
+      "Lat": "53.34924219",
+      "Long": "-6.25773649"
+    },
+    {
+      "Text": "Westmoreland",
+      "Abrev": "WES",
+      "Line": "Luas Green Line",
+      "Lat": "53.34635626",
+      "Long": "-6.25897083"
+    },
+    {
+      "Text": "Trinity",
+      "Abrev": "TRY",
+      "Line": "Luas Green Line",
+      "Lat": "53.34528172",
+      "Long": "-6.25825674"
+    },
+    {
+      "Text": "Dawson",
+      "Abrev": "DAW",
+      "Line": "Luas Green Line",
+      "Lat": "53.34216927",
+      "Long": "-6.25796366"
+    },
+    {
+      "Text": "St. Stephen's Green",
+      "Abrev": "STS",
+      "Line": "Luas Green Line",
+      "Lat": "53.3390722222222",
+      "Long": "-6.26133333333333"
+    },
+    {
+      "Text": "Harcourt",
+      "Abrev": "HAR",
+      "Line": "Luas Green Line",
+      "Lat": "53.3333583333333",
+      "Long": "-6.26265"
+    },
+    {
+      "Text": "Charlemont",
+      "Abrev": "CHA",
+      "Line": "Luas Green Line",
+      "Lat": "53.3306694444444",
+      "Long": "-6.25868333333333"
+    },
+    {
+      "Text": "Ranelagh",
+      "Abrev": "RAN",
+      "Line": "Luas Green Line",
+      "Lat": "53.3264333333333",
+      "Long": "-6.25620277777778"
+    },
+    {
+      "Text": "Beechwood",
+      "Abrev": "BEE",
+      "Line": "Luas Green Line",
+      "Lat": "53.3208222222222",
+      "Long": "-6.25465277777778"
+    },
+    {
+      "Text": "Cowper",
+      "Abrev": "COW",
+      "Line": "Luas Green Line",
+      "Lat": "53.3164666666667",
+      "Long": "-6.25344722222222"
+    },
+    {
+      "Text": "Milltown",
+      "Abrev": "MIL",
+      "Line": "Luas Green Line",
+      "Lat": "53.3099166666667",
+      "Long": "-6.25172777777778"
+    },
+    {
+      "Text": "Windy Arbour",
+      "Abrev": "WIN",
+      "Line": "Luas Green Line",
+      "Lat": "53.3015583333333",
+      "Long": "-6.25070833333333"
+    },
+    {
+      "Text": "Dundrum",
+      "Abrev": "DUN",
+      "Line": "Luas Green Line",
+      "Lat": "53.2923583333333",
+      "Long": "-6.24511666666667"
+    },
+    {
+      "Text": "Balally",
+      "Abrev": "BAL",
+      "Line": "Luas Green Line",
+      "Lat": "53.2861055555556",
+      "Long": "-6.23677222222222"
+    },
+    {
+      "Text": "Kilmacud",
+      "Abrev": "KIL",
+      "Line": "Luas Green Line",
+      "Lat": "53.2830083333333",
+      "Long": "-6.22388611111111"
+    },
+    {
+      "Text": "Stillorgan",
+      "Abrev": "STI",
+      "Line": "Luas Green Line",
+      "Lat": "53.2793111111111",
+      "Long": "-6.20991944444444"
+    },
+    {
+      "Text": "Sandyford",
+      "Abrev": "SAN",
+      "Line": "Luas Green Line",
+      "Lat": "53.2776027777778",
+      "Long": "-6.20467777777778"
+    },
+    {
+      "Text": "Central Park",
+      "Abrev": "CPK",
+      "Line": "Luas Green Line",
+      "Lat": "53.27015",
+      "Long": "-6.20376388888889"
+    },
+    {
+      "Text": "Glencairn",
+      "Abrev": "GLE",
+      "Line": "Luas Green Line",
+      "Lat": "53.2663361111111",
+      "Long": "-6.20994166666667"
+    },
+    {
+      "Text": "The Gallops",
+      "Abrev": "GAL",
+      "Line": "Luas Green Line",
+      "Lat": "53.2611638888889",
+      "Long": "-6.20602222222222"
+    },
+    {
+      "Text": "Leopardstown Valley",
+      "Abrev": "LEO",
+      "Line": "Luas Green Line",
+      "Lat": "53.2582472222222",
+      "Long": "-6.19836111111111"
+    },
+    {
+      "Text": "Ballyogan Wood",
+      "Abrev": "BAW",
+      "Line": "Luas Green Line",
+      "Lat": "53.255047",
+      "Long": "-6.184475"
+    },
+    {
+      "Text": "Carrickmines",
+      "Abrev": "CCK",
+      "Line": "Luas Green Line",
+      "Lat": "53.2540333333333",
+      "Long": "-6.16990833333333"
+    },
+    {
+      "Text": "Laughanstown",
+      "Abrev": "LAU",
+      "Line": "Luas Green Line",
+      "Lat": "53.2506055555556",
+      "Long": "-6.15500555555556"
+    },
+    {
+      "Text": "Cherrywood",
+      "Abrev": "CHE",
+      "Line": "Luas Green Line",
+      "Lat": "53.2453333333333",
+      "Long": "-6.14585277777778"
+    },
+    {
+      "Text": "Bride's Glen",
+      "Abrev": "BRI",
+      "Line": "Luas Green Line",
+      "Lat": "53.242075",
+      "Long": "-6.14288611111111"
+    }
+  ]
+}
