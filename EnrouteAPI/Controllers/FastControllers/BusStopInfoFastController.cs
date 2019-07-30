@@ -3,10 +3,10 @@ using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace EnrouteAPI.Controllers
+namespace EnrouteAPI.Controllers.FastControllers
 {
     [Route("api/[controller]")]
-    public class AllBusStopsController : Controller
+    public class BusStopInfoFastController : Controller
     {
         [HttpGet]
         public string Get()

@@ -5,7 +5,7 @@ using EnrouteAPI.DublinBus;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace EnrouteAPI.Controllers
+namespace EnrouteAPI.Controllers.BusControllers
 {
     [Route("api/[controller]")]
     public class BusRTIController : ControllerBase

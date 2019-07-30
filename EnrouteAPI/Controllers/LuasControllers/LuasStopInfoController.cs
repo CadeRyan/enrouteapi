@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using EnrouteAPI.LUAS;
 using Newtonsoft.Json;
 
-namespace EnrouteAPI.Controllers
+namespace EnrouteAPI.Controllers.LuasControllers
 {
     [Route("api/[controller]")]
     public class LuasStopInfoController : ControllerBase

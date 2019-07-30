@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 using EnrouteAPI.LUAS;
 using System.Xml.Serialization;
 
-namespace EnrouteAPI.Controllers
+namespace EnrouteAPI.Controllers.LuasControllers
 {
     [Route("api/[controller]")]
     public class LuasRTIController : ControllerBase

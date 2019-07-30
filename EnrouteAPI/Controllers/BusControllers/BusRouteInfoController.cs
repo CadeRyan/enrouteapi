@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 using System.IO;
 using EnrouteAPI.DublinBus;
 
-namespace EnrouteAPI.Controllers
+namespace EnrouteAPI.Controllers.BusControllers
 {
     [Route("api/[controller]")]
     public class BusRouteInfoController : ControllerBase

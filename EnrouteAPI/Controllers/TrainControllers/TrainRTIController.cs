@@ -5,7 +5,7 @@ using EnrouteAPI.Train;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace EnrouteAPI.Controllers
+namespace EnrouteAPI.Controllers.TrainControllers
 {
     [Route("api/[controller]")]
     public class TrainRTIController : ControllerBase
