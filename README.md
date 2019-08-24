@@ -26,16 +26,16 @@ To track the current endpoints provided by the API:
   - http://enrouteapi.azurewebsites.net/api/buscoords/<busStop> Return coordinates for entered Bus Stop
   - http://enrouteapi.azurewebsites.net/api/traincoords/<trainStation> Return coordinates for entered Train Station
   
-  -http://enrouteapi.azurewebsites.net/api/luasSearch/null Returns all the luas stops in Geographical Order
-  -http://enrouteapi.azurewebsites.net/api/trainSearch/null Returns all the train stops in Alphabetical Order
-  -http://enrouteapi.azurewebsites.net/api/busSearch/null Returns all the bus stops in Numerical Order
+  - http://enrouteapi.azurewebsites.net/api/luasSearch/null Returns all the luas stops in Geographical Order
+  - http://enrouteapi.azurewebsites.net/api/trainSearch/null Returns all the train stops in Alphabetical Order
+  - http://enrouteapi.azurewebsites.net/api/busSearch/null Returns all the bus stops in Numerical Order
   
   
-  -http://enrouteapi.azurewebsites.net/api/luasSearch/<stopNa..> Returns all the luas stops in Alphabetical Order filtered to          start with what you have entered
+  - http://enrouteapi.azurewebsites.net/api/luasSearch/<stopNa..> Returns all the luas stops in Alphabetical Order filtered to          start with what you have entered
   
-  -http://enrouteapi.azurewebsites.net/api/trainSearch/<stationNa..> Returns all the train stops in Alphabetical Order filtered to start with what you have entered
+  - http://enrouteapi.azurewebsites.net/api/trainSearch/<stationNa..> Returns all the train stops in Alphabetical Order filtered to start with what you have entered
   
-  -http://enrouteapi.azurewebsites.net/api/busSearch//<stopNum..> Returns all the bus stops in Numerical Order filtered to start with what you have entered
+  - http://enrouteapi.azurewebsites.net/api/busSearch//<stopNum..> Returns all the bus stops in Numerical Order filtered to start with what you have entered
 
 
   
