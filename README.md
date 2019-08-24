@@ -22,25 +22,17 @@ To track the current endpoints provided by the API:
   
   To Do:
   
-  - http://enrouteapi.azurewebsites.net/api/luascoords/<luasStop> Return coordinates for entered Luas Stop
-  - http://enrouteapi.azurewebsites.net/api/buscoords/<busStop> Return coordinates for entered Bus Stop
-  - http://enrouteapi.azurewebsites.net/api/traincoords/<trainStation> Return coordinates for entered Train Station
+  - http://enrouteapi.azurewebsites.net/api/luascoords/{id} Return coordinates for entered Luas Stop
+  - http://enrouteapi.azurewebsites.net/api/buscoords/{id} Return coordinates for entered Bus Stop
+  - http://enrouteapi.azurewebsites.net/api/traincoords/{id} Return coordinates for entered Train Station
   
-  - http://enrouteapi.azurewebsites.net/api/luasSearch/null Returns all the luas stops in Geographical Order
-  - http://enrouteapi.azurewebsites.net/api/trainSearch/null Returns all the train stops in Alphabetical Order
-  - http://enrouteapi.azurewebsites.net/api/busSearch/null Returns all the bus stops in Numerical Order
-  
-  
-  - http://enrouteapi.azurewebsites.net/api/luasSearch/<stopNa..> Returns all the luas stops in Alphabetical Order filtered to          start with what you have entered
-  
-  - http://enrouteapi.azurewebsites.net/api/trainSearch/<stationNa..> Returns all the train stops in Alphabetical Order filtered to start with what you have entered
-  
-  - http://enrouteapi.azurewebsites.net/api/busSearch//<stopNum..> Returns all the bus stops in Numerical Order filtered to start with what you have entered
-
-
+  - http://enrouteapi.azurewebsites.net/api/luasSearch/ Returns all the luas stops in Geographical Order
+  - http://enrouteapi.azurewebsites.net/api/trainSearch/ Returns all the train stops in Alphabetical Order
+  - http://enrouteapi.azurewebsites.net/api/busSearch/ Returns all the bus stops in Numerical Order
   
   
-
+  - http://enrouteapi.azurewebsites.net/api/luasSearch/{id} Returns all the luas stops in Alphabetical Order filtered to          start with what you have entered
   
+  - http://enrouteapi.azurewebsites.net/api/trainSearch/{id} Returns all the train stops in Alphabetical Order filtered to start with what you have entered
   
-  stop
+  - http://enrouteapi.azurewebsites.net/api/busSearch/{id} Returns all the bus stops in Numerical Order filtered to start with what you have entered
