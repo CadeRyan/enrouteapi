@@ -30,9 +30,10 @@ To track the current endpoints provided by the API:
   - http://enrouteapi.azurewebsites.net/api/trainSearch/ Returns all the train stops in Alphabetical Order
   - http://enrouteapi.azurewebsites.net/api/busSearch/ Returns all the bus stops in Numerical Order
   
-  
   - http://enrouteapi.azurewebsites.net/api/luasSearch/{id} Returns all the luas stops in Alphabetical Order filtered to          start with what you have entered
   
   - http://enrouteapi.azurewebsites.net/api/trainSearch/{id} Returns all the train stops in Alphabetical Order filtered to start with what you have entered
   
   - http://enrouteapi.azurewebsites.net/api/busSearch/{id} Returns all the bus stops in Numerical Order filtered to start with what you have entered
+
+  - http://enrouteapi.azurewebsites.net/api/busrouteoperator Returns bus route operator
